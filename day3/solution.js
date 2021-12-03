@@ -35,7 +35,7 @@ let O2rating;
 let matcher;
 let keptNumbers = numbers;
 
-for(i = 0; i<keptNumbers[0].length; i++) {
+for(i = 0; i< (keptNumbers?.[0]?.length || 0); i++) {
     onesum = 0;
     zerosum = 0;
     keptNumbers.forEach(number => {
@@ -69,7 +69,7 @@ let CO2rating;
 
 keptNumbers = numbers;
 
-for(i = 0; i<keptNumbers[0].length; i++) {
+for(i = 0; i<(keptNumbers?.[0]?.length || 0); i++) {
     onesum = 0;
     zerosum = 0;
     keptNumbers.forEach(number => {
@@ -95,10 +95,6 @@ for(i = 0; i<keptNumbers[0].length; i++) {
     if (keptNumbers.length === 1) {
         CO2rating = keptNumbers[0]
         console.log("CO2 rating", keptNumbers[0])
-        const o2RateNumber = parseInt(O2rating, 2);
-        const co2RateNumber = parseInt(CO2rating, 2);
-
-        console.log(o2RateNumber * co2RateNumber)
     }
 }
 
